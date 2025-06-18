@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuestra Historia</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff5f8;
+      color: #333;
+    }
+    .header {
+      background: #ffb6c1;
+      text-align: center;
+      padding: 2rem;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #fff;
+    }
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 2rem auto;
+    }
+    .event {
+      background: #fff;
+      padding: 1.5rem;
+      margin: 1rem 0;
+      border-left: 4px solid #ff6f91;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .event:hover {
+      transform: scale(1.02);
+    }
+    .event h2 {
+      margin-top: 0;
+      color: #ff6f91;
+    }
+    .final {
+      text-align: center;
+      margin: 3rem 1rem;
+    }
+    .final button {
+      background: #ff6f91;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .final button:hover {
+      background: #ff3b6f;
+    }
+    .message {
+      display: none;
+      margin-top: 2rem;
+      font-size: 1.5rem;
+      color: #d6336c;
+      animation: fadeIn 1.5s ease forwards;
+    }
+    .photo {
+      display: none;
+      margin-top: 1rem;
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    .photo-btn {
+      margin-top: 1rem;
+      background: #ffd6e0;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .photo-btn:hover {
+      background: #ffb6c1;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>❤️ Nuestra Historia y sobre todo mi historia ya que empecé a vivir cuando te conocí ❤️</h1>
+  </div>
+
+  <div class="timeline">
+    <div class="event">
+      <h2>El día que nos conocimos</h2>
+      <p>De ese día como tal no me acuerdo porque era por la noche si no ten claro que no te hubiese dejado ir desde ese momento. No sabía que acabarías siendo lo más bonito y la suerte de mi vida. Desde el principio sentí la necesidad de estar cerca tuya y ese sentimiento no se me irá nunca.</p>
+      <button class="photo-btn" onclick="mostrarFoto('foto1')">Ver foto 📸</button>
+      <img id="foto1" class="photo" src="IMG_6409.jpeg" alt="Foto del día que nos conocimos">
+    </div>
+
+    <div class="event">
+      <h2>Nuestro primer beso</h2>
+      <p>Esa noche sentí que sucedería algo pero no me imaginaría que con ese beso el mundo se detendría y no volvería a ser nada igual. Fue mágico e inolvidable.</p>
+    </div>
+
+    <div class="event">
+      <h2>Primer viaje juntos</h2>
+      <p>A pesar de que nos conocimos ya viajando y cuenta como tal... Viajar contigo a Toledo a pesar del miedo que me dio porque sabía lo que sentía ya por ti y lo intenso que era, fue la mejor decisión de mi vida y comenzó oficialmente la relación más especial que existe y en la que cada día me enamoraría más. Quiero conocer el mundo entero a tu lado.</p>
+      <button class="photo-btn" onclick="mostrarFoto('fotoToledo')">Ver foto 📸</button>
+      <img id="fotoToledo" class="photo" src="toledo.jpeg" alt="Foto en Toledo">
+    </div>
+
+    <div class="event">
+      <h2>Momento en el que me enamoré más de ti si es que cabe porque fue muy especial</h2>
+      <p>Son todos obviamente ajajaj no puedo elegir pero te dejo algunos de los que más recuerdo con cariño: En el crucero cuando compartíamos miradas, la primera vez que fui a tu casa y tú viniste a la mía, en el concierto de Rels B, en el balneario con los gorritos, en Beni con Kris, en el cumple de mi tío, estar presente en tu cumple, el viaje a PortAventura, cuando me escapé de casa... Estos para mí son muy especiales porque desbloqué sentimientos que nunca había experimentado ni sabía que existían. Gracias.</p>
+
+      <!-- Nuevos momentos con fotos -->
+      <div class="event">
+        <h2>En el crucero cuando compartíamos miradas</h2>
+        <button class="photo-btn" onclick="mostrarFoto('fotoCrucero')">Ver foto 📸</button>
+        <img id="fotoCrucero" class="photo" src="crucero.jpeg" alt="Foto en el crucero">
+      </div>
+
+      <div class="event">
+        <h2>La primera vez que fui a tu casa y tú viniste a la mía</h2>
+        <button class="photo-btn" onclick="mostrarFoto('fotoCasa')">Ver foto 📸</button>
+        <img id="fotoCasa" class="photo" src="casa.jpeg" alt="Foto en casa">
+      </div>
+
+      <div class="event">
+        <h2>En el concierto de Rels B</h2>
+        <button class="photo-btn" onclick="mostrarFoto('fotoConcierto')">Ver foto 📸</button>
+        <img id="fotoConcierto" class="photo" src="concierto.jpeg" alt="Foto en concierto">
+      </div>
+
+      <div class="event">
+        <h2>En el balneario con los gorritos</h2>
+        <button class="photo-btn" onclick="mostrarFoto('fotoBalneario')">Ver foto 📸</button>
+        <img id="fotoBalneario" class="photo" src="balneario.jpeg" alt="Foto en el balneario">
+      </div>
+
+      <div class="event">
+        <h2>En Beni con Kris</h2>
+        <button class="photo-btn" onclick="mostrarFoto('fotoBeni')">Ver foto 📸</button>
+        <img id="fotoBeni" class="photo" src="beni.jpeg" alt="Foto en Beni con Kris">
+      </div>
+
+      <div class="event">
+        <h2>En el cumple de mi tío</h2>
+        <button class="photo-btn" onclick="mostrarFoto('fotoCumpleTio')">Ver foto 📸</button>
+        <img id="fotoCumpleTio" class="photo" src="cumple_tio.jpeg" alt="Foto en el cumple de mi tío">
+      </div>
+
+      <div class="event">
+        <h2>Estar presente en tu cumple</h2>
+        <button class="photo-btn" onclick="mostrarFoto('fotoCumple')">Ver foto 📸</button>
+        <img id="fotoCumple" class="photo" src="cumple.jpeg" alt="Foto en tu cumpleaños">
+      </div>
+    </div>
+
+    <div class="event">
+      <h2>Viaje a PortAventura</h2>
+      <button class="photo-btn" onclick="mostrarFoto('fotoPortAventura')">Ver foto 📸</button>
+      <img id="fotoPortAventura" class="photo" src="portaventura.jpeg" alt="Foto en PortAventura">
+    </div>
+
+    <div class="event">
+      <h2>Hoy</h2>
+      <p>Quería recordarte lo importante que eres para mí y en general porque eres una persona llena de luz y muy especial, vales mucho y quiero estar siempre a tu lado para apoyarte en tus logros y en tus peores momentos ya que son inevitables pero prometo que estaré a tu lado para que te levantes y seas más feliz aún.</p>
+    </div>
+  </div>
+
+  <div class="final">
+    <button onclick="mostrarMensaje()">Haz clic aquí 💌</button>
+    <div class="message" id="mensaje">
+      Gracias por ser tú. Porque tienes mucha paciencia conmigo y espero mejorar cada día para hacértelo más fácil, por las risas y mejores momentos de mi vida que me das, tus besos y abrazos inolvidables. Eres mi presente y mi futuro y lo más infinito que tengo. Te amo David. 💖
+    </div>
+  </div>
+
+  <script>
+    function mostrarMensaje() {
+      document.getElementById('mensaje').style.display = 'block';
+    }
+
+    function mostrarFoto(id) {
+      const img = document.getElementById(id);
+      img.style.display = 'block';
+      img.style.animation = 'fadeIn 1.5s ease forwards';
+    }
+  </script>
+</body>
+</html>
